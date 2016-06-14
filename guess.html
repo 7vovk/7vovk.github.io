@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script>
+	function play(){
+		var answer = Math.floor(Math.random() * 100) + 1;
+		var tryCount = 0;		
+		while(true){
+			tryCount++;
+			var userAnswer = prompt("Введите число от 1 до 100. Для выхода нажмите q");
+			if (userAnswer == "q")
+				break;
+
+			userAnswer = parseInt(userAnswer);
+
+			if ( (answer >=1) && (answer <=100) ){
+
+				if (answer == userAnswer){
+					alert("Ты угадал. Поздравляю");
+					break;
+				} else if(answer > userAnswer){
+					alert("Число слишком маленькое");
+				} else {
+					alert("Число слишком большое");
+				}
+			} else {
+				alert("Вводите числа только от 1 до 100!");
+			}
+		}
+
+		alert ("Игра окончена. Вам понадобилось " + tryCount + " попыток");
+	}
+
+</script>>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="https://vk.com/vavan41k">Я в контакте</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра в загадки</h2>
+	</div>
+	<div id="content">
+
+		<h3>Угадай число от 1 до 100!</h3>
+		<p>У тебя есть неограниченное число попыток, после каждой из них ты узнаешь, правильный ответ больше или меньше твоего. Цель - угадать загаданное число за ноименьшее количество попыток.</p>
+		<p>Удачи!</p>
+		
+			<input type="button" value="Начать игру" onClick="play()"/>
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="https://vk.com/vavan41k">7vovk</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
